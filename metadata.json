@@ -1,0 +1,12 @@
+{
+  "name": "Rafeeq Al-Haramain | رفيق الحرمين",
+  "description": "A premium, official-inspired companion app for Hajj and Umrah pilgrims, providing real-time guidance, interactive counters, and secure ritual assistance.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

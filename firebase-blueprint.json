@@ -1,0 +1,39 @@
+{
+  "entities": {
+    "GroupMember": {
+      "title": "GroupMember",
+      "description": "A member of a reunion group with location data.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "description": "The unique ID of the member." },
+        "name": { "type": "string", "description": "The display name of the member." },
+        "latitude": { "type": "number", "description": "Current latitude." },
+        "longitude": { "type": "number", "description": "Current longitude." },
+        "lastUpdated": { "type": "integer", "description": "Timestamp of last update." },
+        "photoURL": { "type": "string", "description": "Optional photo URL." }
+      },
+      "required": ["uid", "name", "latitude", "longitude", "lastUpdated"]
+    },
+    "ReunionGroup": {
+      "title": "ReunionGroup",
+      "description": "A group for real-time location sharing.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "The group code." },
+        "name": { "type": "string", "description": "The name of the group." },
+        "adminUid": { "type": "string", "description": "The UID of the group creator." },
+        "members": { 
+          "type": "object", 
+          "description": "A map of member UIDs to GroupMember objects." 
+        }
+      },
+      "required": ["id", "name", "adminUid", "members"]
+    }
+  },
+  "firestore": {
+    "/groups/{groupId}": {
+      "schema": "ReunionGroup",
+      "description": "Collection of reunion groups."
+    }
+  }
+}

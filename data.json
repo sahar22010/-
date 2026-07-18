@@ -1,0 +1,102 @@
+
+{
+  "hotels": {
+    "makkah": [
+      {
+        "id": 1,
+        "name": "فندق برج ساعة مكة الملكي فيرمونت",
+        "name_en": "Makkah Clock Royal Tower, A Fairmont Hotel",
+        "type": "hotel",
+        "category": "فاخر",
+        "address": "أبراج البيت، مكة",
+        "latitude": 21.4195,
+        "longitude": 39.8262,
+        "phone": "+966 12 571 0000",
+        "website": "https://www.fairmont.com/makkah",
+        "description": "فندق فاخر يطل مباشرة على الحرم المكي الشريف",
+        "rating": 4.7,
+        "price_range": "1000-3000 ريال",
+        "photo": "https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=800",
+        "features": ["واي فاي مجاني", "مواقف سيارات", "مطاعم متعددة", "إطلالة مباشرة"]
+      },
+      {
+        "id": 2,
+        "name": "فندق قصر مكة رافلز",
+        "name_en": "Raffles Makkah Palace",
+        "type": "hotel",
+        "category": "فاخر",
+        "address": "أبراج البيت، مكة",
+        "latitude": 21.4190,
+        "longitude": 39.8260,
+        "phone": "+966 12 571 7888",
+        "website": "https://www.raffles.com/makkah",
+        "description": "تجربة استثنائية من الفخامة والخدمة الشخصية",
+        "rating": 4.9,
+        "price_range": "1500-4000 ريال",
+        "photo": "https://images.unsplash.com/photo-1551882547-ff43c63fedfe?q=80&w=800",
+        "features": ["خادم شخصي", "سبا", "إفطار فاخر"]
+      }
+    ],
+    "madinah": [
+      {
+        "id": 50,
+        "name": "فندق بولمان زمزم المدينة",
+        "name_en": "Pullman Zamzam Madina",
+        "type": "hotel",
+        "category": "فاخر",
+        "address": "المدينة المنورة، المنطقة المركزية",
+        "latitude": 24.4672,
+        "longitude": 39.6108,
+        "phone": "+966 14 821 0500",
+        "website": "https://all.accor.com",
+        "description": "يقع على بعد خطوات قليلة من الحرم النبوي الشريف",
+        "rating": 4.5,
+        "price_range": "600-1200 ريال",
+        "photo": "https://images.unsplash.com/photo-1564769662533-4f00a87b4056?q=80&w=800",
+        "features": ["واي فاي مجاني", "مطعم", "قرب من الحرم"]
+      }
+    ]
+  },
+  "restaurants": {
+    "makkah": [
+      {
+        "id": 101,
+        "name": "البيك",
+        "name_en": "Al Baik",
+        "type": "restaurant",
+        "category": "وجبات سريعة",
+        "address": "أبراج البيت / العزيزية",
+        "latitude": 21.4192,
+        "longitude": 39.8258,
+        "phone": "",
+        "website": "https://www.albaik.com",
+        "description": "أشهر مطعم وجبات سريعة في المملكة العربية السعودية",
+        "rating": 4.8,
+        "price_range": "15-35 ريال",
+        "photo": "https://images.unsplash.com/photo-1562967914-6cbb0f89e471?q=80&w=800",
+        "features": ["سرعة الخدمة", "سعر اقتصادي"]
+      }
+    ]
+  },
+  "cafes": {
+    "makkah": [
+      {
+        "id": 201,
+        "name": "كويارد - برج الساعة",
+        "name_en": "COYARD - Clock Tower",
+        "type": "cafe",
+        "category": "قهوة مختصة",
+        "address": "أبراج البيت، مكة",
+        "latitude": 21.4196,
+        "longitude": 39.8261,
+        "phone": "",
+        "website": "",
+        "description": "قهوة مختصة مميزة بإطلالة على ساحات الحرم",
+        "rating": 4.6,
+        "price_range": "20-45 ريال",
+        "photo": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=800",
+        "features": ["قهوة مختصة", "جلسات داخلية"]
+      }
+    ]
+  }
+}
