@@ -1,12 +1,11 @@
 import express from "express";
 import path from "path";
-import { createServer as createViteServer } from "vite";
 import { GoogleGenAI } from "@google/genai";
 import { GuidanceMode } from "./types";
 
 async function startServer() {
   const app = express();
-  const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
+  const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 8080;
 
   app.use(express.json());
 
@@ -107,20 +106,13 @@ async function startServer() {
     res.json({ status: "ok" });
   });
 
-  if (process.env.NODE_ENV !== "production") {
-    const vite = await createViteServer({
-      server: { middlewareMode: true },
-      appType: "spa",
-    });
-    app.use(vite.middlewares);
-  } else {
-    const distPath = path.join(process.cwd(), "dist");
-    app.use(express.static(distPath));
-    // Fallback handler for SPA routing - must be the last middleware
-    app.use((req: express.Request, res: express.Response) => {
-      res.sendFile(path.join(distPath, "index.html"));
-    });
-  }
+  const distPath = path.join(process.cwd(), "dist");
+  app.use(express.static(distPath));
+
+  // Fallback handler for SPA routing
+  app.use((req: express.Request, res: express.Response) => {
+    res.sendFile(path.join(distPath, "index.html"));
+  });
 
   app.listen(PORT, "0.0.0.0", () => {
     console.log(`Server running on port ${PORT}`);
@@ -129,5 +121,6 @@ async function startServer() {
 
 startServer().catch((err) => {
   console.error("Failed to start server:", err);
+  process.exit(1);
 });
 
